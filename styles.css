@@ -1,0 +1,872 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-top {
+    background: #f8f9fa;
+    padding: 8px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.header-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-top-left {
+    display: flex;
+    gap: 20px;
+}
+
+.header-top-left a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.header-top-left a:hover {
+    color: #d4af37;
+}
+
+.header-top-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.language-selector {
+    display: flex;
+    gap: 10px;
+}
+
+.language-selector span {
+    cursor: pointer;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.language-selector span.active {
+    background: #d4af37;
+    color: #fff;
+}
+
+.appointment, .login {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.appointment:hover, .login:hover {
+    color: #d4af37;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cart:hover {
+    background: #f8f9fa;
+}
+
+.cart i {
+    color: #d4af37;
+    font-size: 18px;
+}
+
+.cart-count {
+    background: #d4af37;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.cart-total {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.total-amount {
+    font-weight: bold;
+    color: #d4af37;
+}
+
+.header-main {
+    padding: 15px 0;
+}
+
+.header-main .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.main-nav a:hover {
+    color: #d4af37;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #d4af37;
+    transition: width 0.3s;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* Promotional Banners */
+.promo-banners {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 30px 0;
+}
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.promo-item {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.promo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.promo-content h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.learn-more {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.learn-more:hover {
+    color: #b8941f;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #d4af37;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Jewelry Categories */
+.jewelry-categories {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.jewelry-categories h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.category-tabs {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tab-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.tab-btn {
+    background: #f8f9fa;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background: #d4af37;
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.category-item {
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.category-item:hover {
+    transform: translateY(-10px);
+}
+
+.category-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s;
+}
+
+.category-item:hover img {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.category-item h3 {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* Latest Promotions */
+.latest-promotions {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.latest-promotions h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.promotion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.promotion-item {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.promotion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.promotion-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.promotion-content {
+    padding: 25px;
+}
+
+.promotion-content h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Natural Diamond Section */
+.natural-diamond {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.section-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #d4af37;
+}
+
+.diamond-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.diamond-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.diamond-hero h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.diamond-hero p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.diamond-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.feature {
+    text-align: center;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature i {
+    font-size: 3rem;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+.feature h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.feature p {
+    color: #666;
+}
+
+/* Brand Diamond Section */
+.brand-diamond {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.brand-diamond h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.brand-item {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.brand-item:hover {
+    transform: translateY(-5px);
+}
+
+.brand-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.brand-content {
+    padding: 30px;
+    text-align: center;
+}
+
+.brand-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.brand-content p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.brand-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.brand-links a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.brand-links a:hover {
+    color: #b8941f;
+}
+
+/* Professional Piercing */
+.professional-piercing {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.piercing-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.piercing-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.piercing-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #d4af37;
+}
+
+.piercing-text p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.piercing-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Gold Service */
+.gold-service {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.service-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.service-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.service-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #d4af37;
+}
+
+.service-text p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.service-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Wedding Services */
+.wedding-services {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+    color: #fff;
+    text-align: center;
+}
+
+.wedding-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.wedding-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.wedding-features {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.wedding-features .feature {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.wedding-features .feature i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.wedding-features .feature h4 {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Member Benefits */
+.member-benefits {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.member-benefits h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 40px 30px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-item i {
+    font-size: 3rem;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+.benefit-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.benefit-item p {
+    color: #666;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #d4af37;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #d4af37;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #d4af37;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+    background: #b8941f;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-top .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .header-main .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .jewelry-categories h2,
+    .latest-promotions h2,
+    .natural-diamond .section-header h2,
+    .brand-diamond h2,
+    .professional-piercing .piercing-text h2,
+    .gold-service .service-text h2,
+    .wedding-services .wedding-content h2,
+    .member-benefits h2 {
+        font-size: 2rem;
+    }
+    
+    .piercing-content,
+    .service-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .wedding-features {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .tab-nav {
+        flex-wrap: wrap;
+    }
+    
+    .section-nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .brand-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .promo-grid,
+    .category-grid,
+    .promotion-grid,
+    .diamond-features,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-nav ul {
+        gap: 10px;
+    }
+    
+    .main-nav a {
+        font-size: 14px;
+    }
+} 
